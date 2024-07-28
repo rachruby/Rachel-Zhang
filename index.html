@@ -32,10 +32,10 @@
             </header>
             <div class="container">
                 <div class="rachel-pic">
-                    <img src="img/main_photo.jpg" alt="profile pic">
+                    <img src="images/main_photo.jpg" alt="profile pic">
                 </div>
                 <div class="rz-text">
-                    <h5>Hello, I'm <span class="">Ruitong Zhang</span></h5>
+                    <h5>Hello, I'm <span class="input">Ruitong Zhang</span></h5>
                     <h1>Computer Engineering Student @ University of Waterloo</h1>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
                         Incidunt vel dignissimos minus quod, odit similique aspernatur adipisci labore cupiditate, 
@@ -57,6 +57,8 @@
             </div>
         </div>
     </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.min.js"></script>
     <script>
         /* creating button click show hide navbar **/
         var togglebtn=document.querySelector(".togglebtn");
@@ -66,6 +68,13 @@
         togglebtn.addEventListener("click", function(){
             this.classList.toggle("click");
             nav.classList.toggle("open");
+        })
+
+        var typed=new Typed(".input", {
+            strings:["Frontend Developer", "UX Designer", "iOS App Developer"],
+            typedSpeed: 70,
+            backSpeed: 55,
+            loop:true
         })
     </script>
 </body>
