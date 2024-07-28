@@ -1,6 +1,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ruitong Zhang</title>
     <link rel="stylesheet" href="styles.css">
@@ -29,11 +30,43 @@
                     </u1>
                 </nav>
             </header>
+            <div class="container">
+                <div class="rachel-pic">
+                    <img src="images/main_photo.jpg" alt="profile pic">
+                </div>
+                <div class="rz-text">
+                    <h5>Hello, I'm <span class="">Ruitong Zhang</span>/h5>
+                    <h1>Computer Engineering Student @ University of Waterloo</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+                        Incidunt vel dignissimos minus quod, odit similique aspernatur adipisci labore cupiditate, 
+                        aperiam nulla quos culpa animi ipsam modi saepe quibusdam! Omnis, laudantium.
+                    </p>
+                    <div class="btn-group">
+                        <a href="#" class="btn active">Download CV</a>
+                        <a href="#" class="btn">Contact</a>
+                    </div>
+
+                    <div class="social">
+                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="#"><i class="fa-brands fa-devpost"></i></a>
+                        <a href="#"><i class="fa-brands fa-github"></i></a>
+                        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-    <h1>Ruitong Zhang</h1>
-    <a href="/Rachel-Zhang/contact.html"></a>
-    <p>Hello, I'm Ruitong Zhang</p>
-    
+    <script>
+        /* creating button click show hide navbar **/
+        var togglebtn=document.querySelector(".togglebtn");
+        var nav=document.querySelector(".navlinks");
+        var links=document.querySelector(".navlinks li");
+
+        togglebtn.addEventListener("click", function(){
+            this.classList.toggle("click");
+            nav.classList.toggle("open");
+        })
+    </script>
 </body>
 </html>
