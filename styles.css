@@ -118,6 +118,10 @@ nav .navlinks li a{
     color: yellow;
     font-size: 3rem;
 }
+.rz-text h2{
+    color: rgb(221, 221, 6);
+    font-size: 2rem;
+}
 .rz-text p{
     color: whitesmoke;
 
