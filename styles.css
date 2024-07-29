@@ -193,7 +193,11 @@ nav .navlinks li a {
 .project-info h2, .project-info p {
     font-size: 1rem; /* Adjust font size to fit in larger blocks */
     margin: 0;
-    color: #fefe37;
+}
+
+/* New rule to make My Portfolio h1 text yellow */
+.portfolio h1 {
+    color: yellow; /* Change color to yellow */
 }
 
 /* Footer */
