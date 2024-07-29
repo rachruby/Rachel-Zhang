@@ -37,7 +37,7 @@ header {
 }
 .logo i {
     position: relative; /* Position relative to move it */
-    top: 15px; /* Move the icon 20px downward */
+    top: 35px; /* Move the icon 20px downward */
     height: 45px;
     width: 45px;
     background-color: rgb(197, 88, 255);
@@ -52,7 +52,7 @@ header {
 }
 .logo .logo-text {
     position: relative; /* Position relative to move it */
-    top: 35px; /* Move the text 20px downward */
+    top: 15px; /* Move the text 20px downward */
     font-size: 24px;
     font-weight: 500;
     color: aliceblue;
