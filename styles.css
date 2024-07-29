@@ -1,39 +1,14 @@
 /* Existing styles */
-* {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-    font-family: Poppins, sans-serif;
-    text-decoration: none;
-}
-body {
-    overflow-x: hidden;
-}
-.hero-header {
-    width: 100%;
-    height: 100%;
-    min-height: 100vh;
-    background: #313c73;
-}
-.wrapper {
-    width: 1280px;
-    max-width: 95%;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-header {
-    padding: 40px 0 30px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-}
+
+/* Adjust logo positioning */
 .logo {
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 20px; /* Adjust this to move the logo and "RZ" downward */
+    margin-top: 20px; /* Move logo 20px downward */
 }
+
+/* Optional: Adjust other parts of the logo if necessary */
 .logo i {
     height: 45px;
     width: 45px;
@@ -47,127 +22,26 @@ header {
     cursor: pointer;
     text-align: center;
 }
+
 .logo .logo-text {
     font-size: 24px;
     font-weight: 500;
     color: aliceblue;
 }
-nav .togglebtn {
-    width: 35px;
-    height: 35px;
-    position: absolute;
-    top: 45px;
-    right: 3%;
-    z-index: 5;
-    cursor: pointer;
-    display: none;
-}
-nav .togglebtn span {
-    display: block;
-    background-color: blanchedalmond;
-    margin: 5px 0px;
-    width: 100%;
-    height: 3px;
-    transition: 0.3s;
-    transition-property: transform, opacity;
-}
-nav .navlinks {
-    list-style-type: none;
-}
-nav .navlinks li {
-    display: inline-block;
-}
-nav .navlinks li a {
-    color: aquamarine;
-    margin-right: 2.5rem;
-}
-.container {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding-top: 4rem;
-}
-.container .rachel-pic {
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
-    overflow: hidden;
-    border: 15px solid #444;
-    box-shadow: 5px 7px 25px rgba(0, 0, 0, 0.5);
-}
-.rachel-pic img {
-    height: 100%;
-    width: 100%;
-    transition: 0.5s;
-}
-.rachel-pic img:hover {
-    transform: scale(1.2);
-}
-.rz-text {
-    max-width: 500px;
-    display: flex;
-    flex-direction: column;
-}
-.rz-text h5 {
-    color: whitesmoke;
-    font-size: 14px;
-}
-.rz-text h5 span {
-    color: yellow;
-    font-size: 16px;
-}
-.rz-text h1 {
-    color: yellow;
-    font-size: 3rem;
-}
-.rz-text h2 {
-    color: rgb(221, 221, 6);
-    font-size: 2rem;
-}
-.rz-text p {
-    color: whitesmoke;
-}
-.btn-group {
-    margin: 45px 0;
-}
-.btn-group .btn {
-    border-color: pink;
-    color: whitesmoke;
-    background-color: blue;
-    padding: 12px 25px;
-    margin: 5px 0;
-    margin-right: 7px;
-    border-radius: 30px;
-    border: 2px solid whitesmoke;
-    box-shadow: 0 10px 10px -8px rgba(0, 0, 0, 0.78%);
-}
-.btn.active {
-    border-color: yellow;
-}
-.rz-text .social i {
-    color: pink;
-    font-size: 18px;
-    margin-right: 10px;
-    transition: 0.5s;
-}
-.hero-text .social i:hover {
-    color: whitesmoke;
-    transform: rotate(360deg);
-}
 
-/* Portfolio Section - Updated */
+/* Portfolio Section - Ensure other styles are correct */
 .portfolio {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
-    gap: 20px; /* Space out the project blocks */
-    justify-content: center; /* Center the project blocks */
-    margin: 20px; /* Adjust top/bottom margins if needed */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    margin: 20px;
     padding: 20px;
 }
 
 .project {
-    width: 100%; /* Full width of the grid cell */
-    aspect-ratio: 1 / 1; /* Ensure the project block remains square */
+    width: 100%;
+    aspect-ratio: 1 / 1;
     background: #fff;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(84, 32, 125, 0.6); /* Darker shade of purple for shadow */
@@ -181,24 +55,27 @@ nav .navlinks li a {
 .project img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ensure image covers the block */
+    object-fit: cover;
     display: block;
 }
 
 .project-info {
-    padding: 1rem; /* Adjust padding as needed */
-    text-align: center; /* Center text */
+    padding: 1rem;
+    text-align: center;
 }
 
 .project-info h2, .project-info p {
-    font-size: 1rem; /* Adjust font size to fit in larger blocks */
+    font-size: 1rem;
     margin: 0;
     color: #000000;
 }
 
-/* Ensure My Portfolio heading color is yellow */
-.portfolio > h1 {
+/* Ensuring My Portfolio h1 is yellow */
+.portfolio h1 {
     color: #fefe37; /* Change color to yellow */
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 1rem;
 }
 
 /* Footer */
@@ -245,7 +122,7 @@ footer {
         height: 100vh;
         background-color: #222;
         z-index: 3;
-        box-shadow: 5px 13px 30px rgba(0,0,0,0.1);
+        box-shadow: 5px 13px 30px rgba(0, 0, 0, 0.1);
         transition: 0.5s;
         padding: 25px 0px;
     }
