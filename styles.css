@@ -46,6 +46,7 @@ header {
     margin-right: 5px;
     cursor: pointer;
     text-align: center;
+    margin-top: 20px; /*fixing downward?*/ 
 }
 .logo .logo-text {
     font-size: 24px;
