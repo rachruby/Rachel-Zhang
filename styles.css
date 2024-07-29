@@ -32,12 +32,12 @@ header {
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    margin-top: 15px; /* Move logo container 20px downward */
+    margin-top: 30px; /* Move logo container 20px downward */
     position: relative; /* Required for positioning child elements */
 }
 .logo i {
     position: relative; /* Position relative to move it */
-    top: 35px; /* Move the icon 20px downward */
+    top: 15px; /* Move the icon 20px downward */
     height: 45px;
     width: 45px;
     background-color: rgb(197, 88, 255);
