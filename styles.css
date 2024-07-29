@@ -144,10 +144,12 @@ nav .navlinks li a {
 /* Container Adjustments */
 .container {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between; /* Space items apart */
     align-items: center;
     padding-top: 4rem;
-    flex-direction: column; /* Changed to column for better alignment */
+    flex-direction: row; /* Align items horizontally */
+    max-width: 1280px; /* Constrain container width */
+    margin: 0 auto; /* Center container */
 }
 
 /* Rachel Pic Styling */
@@ -158,6 +160,7 @@ nav .navlinks li a {
     overflow: hidden;
     border: 15px solid #444;
     box-shadow: 5px 7px 25px rgba(0, 0, 0, 0.5);
+    margin-right: 2rem; /* Space between image and text */
 }
 
 .rachel-pic img {
@@ -173,13 +176,11 @@ nav .navlinks li a {
 /* Text Section Styling */
 .rz-text {
     max-width: 500px;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
+    text-align: left; /* Align text to the left */
+    color: whitesmoke;
 }
 
 .rz-text h5 {
-    color: whitesmoke;
     font-size: 14px;
 }
 
@@ -232,7 +233,7 @@ nav .navlinks li a {
     transition: 0.5s;
 }
 
-.hero-text .social i:hover {
+.rz-text .social i:hover {
     color: whitesmoke;
     transform: rotate(360deg);
 }
@@ -297,8 +298,12 @@ nav .navlinks li a {
 
 @media (max-width: 768px) {
     .container {
-        flex-direction: column;
+        flex-direction: column; /* Stack vertically for smaller screens */
         padding-top: 2rem;
+    }
+
+    .rachel-pic {
+        margin: 0 0 2rem 0; /* Space between image and text */
     }
 
     .rz-text {
