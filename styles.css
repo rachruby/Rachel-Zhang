@@ -77,14 +77,27 @@ nav .togglebtn span {
     transition-property: transform, opacity;
 }
 nav .navlinks {
+    display: flex;
     list-style-type: none;
+    padding: 0;
+    margin: 0;
+    position: relative; /* Required for positioning children */
 }
 nav .navlinks li {
+    margin-left: 20px; /* Move links to the right */
+    margin-top: 10px;  /* Move links downward */
     display: inline-block;
 }
 nav .navlinks li a {
     color: aquamarine;
-    margin-right: 2.5rem;
+    text-decoration: none; /* Remove underline */
+    font-size: 1rem; /* Adjust font size if needed */
+    padding: 5px; /* Add some padding */
+    transition: color 0.3s ease;
+}
+
+nav .navlinks li a:hover {
+    color: #ff0; /* Change color on hover, adjust as needed */
 }
 .container {
     display: flex;
