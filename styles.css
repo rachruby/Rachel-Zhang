@@ -165,8 +165,8 @@ nav .navlinks li a {
 }
 
 .project {
-    width: 50px; /* Fixed width */
-    height: 50px; /* Fixed height */
+    width: 500px; /* Fixed width */
+    height: 500px; /* Fixed height */
     background: #fff;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
@@ -185,12 +185,12 @@ nav .navlinks li a {
 }
 
 .project-info {
-    padding: 0.5rem; /* Adjust padding as needed */
+    padding: 1rem; /* Adjust padding as needed */
     text-align: center; /* Center text */
 }
 
 .project-info h2, .project-info p {
-    font-size: 0.75rem; /* Smaller font size to fit in smaller blocks */
+    font-size: 1rem; /* Adjust font size to fit in larger blocks */
     margin: 0;
 }
 
