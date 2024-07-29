@@ -157,19 +157,20 @@ nav .navlinks li a {
 
 /* Portfolio Section - Updated */
 .portfolio {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
     gap: 20px; /* Space out the project blocks */
     justify-content: center; /* Center the project blocks */
     margin: 20px; /* Adjust top/bottom margins if needed */
+    padding: 20px;
 }
 
 .project {
-    width: 500px; /* Fixed width */
-    height: 500px; /* Fixed height */
+    width: 100%; /* Full width of the grid cell */
+    aspect-ratio: 1 / 1; /* Ensure the project block remains square */
     background: #fff;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 8px rgba(84, 32, 125, 0.4); /* Darker shade of purple for shadow */
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     display: flex;
