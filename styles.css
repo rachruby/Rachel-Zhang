@@ -76,28 +76,47 @@ nav .togglebtn span {
     transition: 0.3s;
     transition-property: transform, opacity;
 }
-nav .navlinks {
+/* Ensure the nav container is a flex container */
+nav {
     display: flex;
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    position: relative; /* Required for positioning children */
-}
-nav .navlinks li {
-    margin-left: 20px; /* Move links to the right */
-    margin-top: 10px;  /* Move links downward */
-    display: inline-block;
-}
-nav .navlinks li a {
-    color: aquamarine;
-    text-decoration: none; /* Remove underline */
-    font-size: 1rem; /* Adjust font size if needed */
-    padding: 5px; /* Add some padding */
-    transition: color 0.3s ease;
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+    height: 100%; /* Ensure full height for vertical centering */
 }
 
+/* Center the navigation links */
+nav .navlinks {
+    display: flex; /* Flex container for horizontal layout */
+    list-style-type: none; /* Remove default list styling */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+}
+
+/* Style for each navigation link */
+nav .navlinks li {
+    margin: 0 15px; /* Space between links, adjust as needed */
+    display: flex; /* Align items in the center */
+    align-items: center; /* Center text vertically */
+}
+
+/* Style for navigation link text */
+nav .navlinks li a {
+    color: aquamarine; /* Default link color */
+    text-decoration: none; /* Remove underline */
+    padding: 10px; /* Add some padding around text */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+/* Style for the active link */
+nav .navlinks li a.active {
+    color: yellow; /* Highlight color for active link */
+    font-weight: bold; /* Optional: make the active link bold */
+    border-bottom: 2px solid yellow; /* Optional: underline active link */
+}
+
+/* Optional: Style for hover effect */
 nav .navlinks li a:hover {
-    color: #ff0; /* Change color on hover, adjust as needed */
+    color: #ff0; /* Highlight color on hover */
 }
 .container {
     display: flex;
