@@ -32,7 +32,7 @@ header {
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    margin-top: 30px; /* Move logo container 20px downward */
+    margin-top: 15px; /* Move logo container 20px downward */
     position: relative; /* Required for positioning child elements */
 }
 .logo i {
@@ -85,6 +85,7 @@ nav .navlinks li {
 nav .navlinks li a {
     color: aquamarine;
     margin-right: 2.5rem;
+    margin-top: 30px;
 }
 .container {
     display: flex;
