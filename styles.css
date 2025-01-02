@@ -1,63 +1,120 @@
-/* Existing styles */
-* {
-    box-sizing: border-box;
+*{
+    box-sizing:border-box;
     padding: 0;
     margin: 0;
-    font-family: Poppins, sans-serif;
+    font-family: poppins, sans-serif;
     text-decoration: none;
 }
-body {
-    overflow-x: hidden;
-}
-.hero-header {
-    width: 100%;
-    height: 100%;
+
+body{
     min-height: 100vh;
-    background: #313c73;
+    background: #484075;
 }
-.wrapper {
+.container
+{
+    position: relative;
+    width: 100%;
+    height: 100vh; 
+    overflow: hidden;
+    
+    display: flex;
+    justify-content: space-around;
+    padding-top: 4rem;
+
+
+}
+
+.bubbles
+{
+    z-index: -100;
+    position: relative;
+    display: flex;
+
+}
+.bubbles span
+{
+    position: relative; 
+    width: 30px;
+    height: 30px;
+    background: #4fc3dc;
+    margin: 0 4px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 10px #4fc3dc44,
+    0 0 50px #4fc3dc,
+    0 0 100px #4fc3dc;
+    animation: animate 15s linear infinite;
+    animation-duration: calc(125s / var(--i));
+}
+
+.bubbles span:nth-child(even)
+{
+    background: pink;
+    box-shadow: 0 0 0 10px rgb(211, 131, 171),
+    0 0 50px pink,
+    0 0 100px pink;
+
+
+}
+@keyframes animate
+{
+    0%
+
+    {
+        transform: translateY(100vh) scale(0);
+
+    }
+    100%
+
+    {
+        transform: translateY(-10vh) scale(1);
+
+    }
+
+}
+.wrapper{
     width: 1280px;
     max-width: 95%;
     margin: 0 auto;
     padding: 0 20px;
 }
-header {
-    padding: 40px 0 30px;
+
+.hero-header
+{
+    position: relative;
+    z-index: 100;
+}
+
+header{
+    padding:40px 0 30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
 }
-.logo {
+.logo{
     display: inline-flex;
     justify-content: center;
-    align-items: center;
-    margin-top: 5px; /* Move logo container 20px downward */
-    position: relative; /* Required for positioning child elements */
+    align-items: center; 
 }
-.logo i {
-    position: relative; /* Position relative to move it */
-    top: 5px; /* Move the icon 20px downward */
+.logo i{
     height: 45px;
-    width: 45px;
+    width: 45px; 
     background-color: rgb(197, 88, 255);
     border-radius: 50%;
-    color: aliceblue;
+    color:aliceblue;
     font-weight: 700;
     font-size: 1.5rem;
     padding: 10px;
-    margin-right: 5px;
+    margin-right: 5px; 
     cursor: pointer;
-    text-align: center;
+    text-align: center; 
 }
-.logo .logo-text {
-    position: relative; /* Position relative to move it */
-    top: 5px; /* Move the text 20px downward */
+.logo .logo-text{
     font-size: 24px;
-    font-weight: 500;
-    color: aliceblue;
+    font-weight:500;
+    color:aliceblue;
 }
-nav .togglebtn {
+nav .togglebtn{
     width: 35px;
     height: 35px;
     position: absolute;
@@ -67,7 +124,7 @@ nav .togglebtn {
     cursor: pointer;
     display: none;
 }
-nav .togglebtn span {
+nav .togglebtn span{
     display: block;
     background-color: blanchedalmond;
     margin: 5px 0px;
@@ -76,166 +133,128 @@ nav .togglebtn span {
     transition: 0.3s;
     transition-property: transform, opacity;
 }
-/* Ensure the nav container is a flex container */
-nav {
-    display: flex;
-    justify-content: center; /* Center items horizontally */
-    align-items: center; /* Center items vertically */
-    height: 100%; /* Ensure full height for vertical centering */
+nav .navlinks{
+    list-style-type: none;
+}
+nav .navlinks li{
+    display: inline-block;
+}
+nav .navlinks li a{
+    color:aquamarine; 
+    margin-right: 2.5rem;
 }
 
-/* Center the navigation links */
-nav .navlinks {
-    display: flex; /* Flex container for horizontal layout */
-    list-style-type: none; /* Remove default list styling */
-    padding: 0; /* Remove default padding */
-    margin: 0; /* Remove default margin */
-}
-
-/* Style for each navigation link */
-nav .navlinks li {
-    margin: 0 15px; /* Space between links, adjust as needed */
-    display: flex; /* Align items in the center */
-    align-items: center; /* Center text vertically */
-}
-
-/* Style for navigation link text */
-nav .navlinks li a {
-    color: aquamarine; /* Default link color */
-    text-decoration: none; /* Remove underline */
-    padding: 10px; /* Add some padding around text */
-    transition: color 0.3s ease; /* Smooth color transition */
-}
-
-/* Style for the active link */
-nav .navlinks li a.active {
-    color: yellow; /* Highlight color for active link */
-    font-weight: bold; /* Optional: make the active link bold */
-    border-bottom: 2px solid yellow; /* Optional: underline active link */
-}
-
-/* Optional: Style for hover effect */
-nav .navlinks li a:hover {
-    color: #ff0; /* Highlight color on hover */
-}
-.container {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding-top: 4rem;
-}
-.container .rachel-pic {
+.container .rachel-pic{
     width: 300px;
     height: 300px;
     border-radius: 50%;
     overflow: hidden;
     border: 15px solid #444;
-    box-shadow: 5px 7px 25px rgba(0, 0, 0, 0.5);
+    box-shadow: 5px 7px 25px rgba(0,0,0,0.5);
 }
-.rachel-pic img {
+.rachel-pic img{
     height: 100%;
     width: 100%;
-    transition: 0.5s;
+    transition: 0.5s; 
 }
-.rachel-pic img:hover {
+.rachel-pic img:hover{
     transform: scale(1.2);
 }
-.rz-text {
+.rz-text{
     max-width: 500px;
     display: flex;
     flex-direction: column;
 }
-.rz-text h5 {
+.rz-text h5{
     color: whitesmoke;
-    font-size: 14px;
+    font-size: 14px; 
 }
-.rz-text h5 span {
+.rz-text h5 span{
     color: yellow;
-    font-size: 16px;
+    font-size: 16px; 
 }
-.rz-text h1 {
+.rz-text h1{
     color: yellow;
     font-size: 3rem;
 }
-.rz-text h2 {
+.rz-text h2{
     color: rgb(221, 221, 6);
     font-size: 2rem;
 }
-.rz-text p {
+.rz-text p{
     color: whitesmoke;
+
 }
-.btn-group {
+.btn-group{
     margin: 45px 0;
 }
-.btn-group .btn {
+.btn-group .btn{
     border-color: pink;
     color: whitesmoke;
-    background-color: blue;
     padding: 12px 25px;
     margin: 5px 0;
-    margin-right: 7px;
-    border-radius: 30px;
+    margin-right:7px; 
+    border-radius: 30px; 
     border: 2px solid whitesmoke;
-    box-shadow: 0 10px 10px -8px rgba(0, 0, 0, 0.78%);
+    box-shadow: 0 10px 10px -8px rgba(0 0 0 / 78%);
 }
-.btn.active {
+.btn.active{
     border-color: yellow;
+
 }
-.rz-text .social i {
-    color: pink;
+.rz-text .social i{
+    color:pink;
     font-size: 18px;
-    margin-right: 10px;
+    margin-right: 10px; 
     transition: 0.5s;
 }
-.hero-text .social i:hover {
+.hero-text .social i:hover{
     color: whitesmoke;
     transform: rotate(360deg);
 }
 
-/* Portfolio Section - Updated */
+
+/* Portfolio Section */
 .portfolio {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
-    gap: 20px; /* Space out the project blocks */
-    justify-content: center; /* Center the project blocks */
-    margin: 20px; /* Adjust top/bottom margins if needed */
-    padding: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .project {
-    width: 100%; /* Full width of the grid cell */
-    aspect-ratio: 1 / 1; /* Ensure the project block remains square */
     background: #fff;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(84, 32, 125, 0.6); /* Darker shade of purple for shadow */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+}
+
+.project:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
 }
 
 .project img {
     width: 100%;
-    height: 100%;
-    object-fit: cover; /* Ensure image covers the block */
+    height: auto;
     display: block;
 }
 
 .project-info {
-    padding: 1rem; /* Adjust padding as needed */
-    text-align: center; /* Center text */
+    padding: 1rem;
 }
 
-.project-info h2, .project-info p {
-    font-size: 1rem; /* Adjust font size to fit in larger blocks */
+.project-info h2 {
     margin: 0;
-    color: #000000;
+    font-size: 1.5rem;
+    color: #fefe37;
 }
 
-/* Ensure My Portfolio heading color is yellow */
-.portfolio > h1 {
-    color: #fefe37; /* Change color to yellow */
+.project-info p {
+    margin: 0.5rem 0 0;
+    color: #666;
 }
 
 /* Footer */
@@ -249,49 +268,70 @@ footer {
     width: 100%;
 }
 
-/* Responsive design & displaying navbar for small screen */
-@media(max-width: 930px) {
-    nav .togglebtn {
+/* Responsive design & displaying navbar for small screen*/
+@media(max-width:930px)
+{
+    nav .togglebtn{
         display: initial;
     }
-    /* for toggle button */
+    /* for toggle button**/
     .click {
         top: 45px;
     }
-    .click span {
+    .click span{
         position: absolute;
         margin-top: 12px;
     }
-    .click span:first-child {
+    .click span:first-child{
         transform: rotate(-40deg);
     }
-    .click span:nth-child(2) {
+    .click span:nth-child(2){
         opacity: 0;
-        margin: 0;
+        margin: 0; 
     }
-    .click span:last-child {
+    .click span:last-child{
         transform: rotate(45deg);
-        top: 0;
+        top:0;
     }
-    nav {
-        flex-direction: column; /* Stack items vertically on small screens */
+    nav .navlinks{
+        position: absolute;
+        top:110px;
+        right:-100%;
+        bottom:0;
+        width: 60%;
+        height: 100vh;
+        background-color:#222;
+        z-index: 3;
+        box-shadow: 5px 13px 30px rgba(0,0,0,0.1);
+        transition: 0.5s;
+        padding: 25px 0px;
+
     }
-    nav .navlinks {
-        flex-direction: column; /* Stack links vertically */
-        width: 100%; /* Full width for mobile view */
-        align-items: center; /* Center links horizontally */
+
+    nav .navlinks li{
+        display:block;
+
     }
-    nav .navlinks li {
-        margin: 10px 0; /* Vertical margin for spacing on mobile */
+    nav .navlinks li a{
+        display: block;
+        margin-bottom: 15px;
+        text-align: center; 
+
+    }
+    nav .navlinks.open{
+        right: 0;
     }
 }
 
-@media(max-width: 768px) {
-    .container {
+@media(max-width:768px)
+{
+    .container{
         flex-direction: column;
         padding-top: 2rem;
+
     }
-    .rz-text {
-        padding: 40px 0px;
+    .rz-text{
+        padding: 40px 0px; 
+
     }
 }
